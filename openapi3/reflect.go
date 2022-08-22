@@ -161,6 +161,9 @@ func (r *Reflector) parseRequestBody(
 		definitionPrefix += strings.Title(tag)
 	}
 
+
+	//var b bool
+
 	schema, err := r.Reflect(input,
 		r.withOperation(oc, false, "body"),
 		jsonschema.DefinitionsPrefix("#/components/schemas/"+definitionPrefix),
